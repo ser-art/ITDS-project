@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  itds:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7777:7777"
+    volumes:
+      - ./:/app
+    restart: always

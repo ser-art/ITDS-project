@@ -1,0 +1,55 @@
+# binary files
+__pycache__
+*.DS_Store
+
+# IDE
+.vscode
+.idea
+
+# temp files
+models/
+notebooks/*
+tmp/
+data/
+build/
+*.bundle
+*.egg-info/
+*.pyc
+*.whl
+*.tar.gz
+*.pickle
+*.pkl
+__MACOSX/
+*.zip
+
+# configs
+*.ini
+!configs/*.ini
+*.json
+
+# vault
+vault.txt
+
+# env
+*.env
+*env
+
+# venv
+.venv/
+
+# logs
+*.log
+
+# datasets
+*.csv
+*.csv.zip
+*.npy
+
+# sqlite
+*.db
+
+# .ssh
+.ssh/
+
+# OS
+*.icloud
