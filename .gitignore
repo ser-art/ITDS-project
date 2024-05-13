@@ -24,7 +24,6 @@ __MACOSX/
 # configs
 *.ini
 !configs/*.ini
-*.json
 
 # vault
 vault.txt
