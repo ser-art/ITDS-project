@@ -1,0 +1,5 @@
+fire
+streamlit
+pandas
+numpy
+xgboost
