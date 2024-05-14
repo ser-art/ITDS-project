@@ -11,4 +11,4 @@ WORKDIR /app
 COPY . .
 
 # Entry point
-ENTRYPOINT ["streamlit", "run", "app.py"]
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port", "80"]
