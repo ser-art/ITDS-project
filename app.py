@@ -2,6 +2,7 @@ import streamlit as st
 import fire
 
 from src import model
+from src import mapping
 
 
 def main():
@@ -9,12 +10,19 @@ def main():
     st.title("Airline Satisfaction Prediction")
 
     # Create inputs for each feature
-    AirlineName = st.slider("Airline Name", 0, 5, 3)
-    CabinType = st.slider("Cabin Type", 0, 5, 3)
+    AirlineName = st.selectbox("Airline Name", mapping.airline.keys())
+    AirlineName = mapping.airline[AirlineName]
+
+    CabinType = st.selectbox("Cabin Type", mapping.cabin_type.keys())
+    CabinType = mapping.cabin_type[CabinType]
+
     EntertainmentRating = st.slider("Entertainment Rating", 0, 5, 3)
     FoodRating = st.slider("Food Rating", 0, 5, 3)
     GroundServiceRating = st.slider("Ground Service Rating", 0, 5, 3)
-    OriginCountry = st.number_input("Origin Country", 1, 31, 15)
+
+    OriginCountry = st.selectbox("Origin Country", mapping.country.keys())
+    OriginCountry = mapping.country[OriginCountry]
+
     OverallScore = st.slider("Overall Score", 0, 10, 5)
     SeatComfortRating = st.slider("Seat Comfort Rating", 0, 5, 3)
     ServiceRating = st.slider("Service Rating", 0, 5, 3)
